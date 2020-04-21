@@ -1,6 +1,6 @@
-class CreateIntructors < ActiveRecord::Migration[6.0]
+class CreateInstructors < ActiveRecord::Migration[6.0]
   def change
-    create_table :intructors do |t|
+    create_table :instructors do |t|
       t.string :name
       t.string :dragonType
       t.string :dragonName

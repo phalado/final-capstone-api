@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2020_04_21_200922) do
     t.index ["instructor_id"], name: "index_fly_classes_on_instructor_id"
   end
 
-  create_table "intructors", force: :cascade do |t|
+  create_table "instructors", force: :cascade do |t|
     t.string "name"
     t.string "dragonType"
     t.string "dragonName"

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe FlyClass, type: :model do
-  it { should belong_to(:instructor) }
+RSpec.describe Instructor, type: :model do
+  it { should have_many(:fly_classes).dependent(:destroy) }
 
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:classTime) }

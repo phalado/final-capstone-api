@@ -1,0 +1,2 @@
+class FlyClassesController < ApplicationController
+end

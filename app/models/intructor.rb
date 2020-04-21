@@ -1,2 +1,0 @@
-class Intructor < ApplicationRecord
-end
