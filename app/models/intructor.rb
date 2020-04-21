@@ -1,0 +1,2 @@
+class Intructor < ApplicationRecord
+end

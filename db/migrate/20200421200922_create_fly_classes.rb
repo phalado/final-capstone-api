@@ -3,7 +3,7 @@ class CreateFlyClasses < ActiveRecord::Migration[6.0]
     create_table :fly_classes do |t|
       t.string :name
       t.datetime :classTime
-      t.string :instructor
+      t.references :instructor, null: false, foreign_key: true
       t.string :status
 
       t.timestamps
