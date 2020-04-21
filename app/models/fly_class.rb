@@ -1,0 +1,2 @@
+class FlyClass < ApplicationRecord
+end
