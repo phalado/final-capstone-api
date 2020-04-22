@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_21_200922) do
+ActiveRecord::Schema.define(version: 2020_04_22_160253) do
 
   create_table "fly_classes", force: :cascade do |t|
-    t.string "name"
     t.datetime "classTime"
     t.integer "instructor_id", null: false
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
     t.index ["instructor_id"], name: "index_fly_classes_on_instructor_id"
+    t.index ["user_id"], name: "index_fly_classes_on_user_id"
   end
 
   create_table "instructors", force: :cascade do |t|
@@ -28,7 +29,18 @@ ActiveRecord::Schema.define(version: 2020_04_21_200922) do
     t.string "dragonName"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "inst_image"
+    t.string "dragon_image"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "fly_classes", "instructors"
+  add_foreign_key "fly_classes", "users"
 end

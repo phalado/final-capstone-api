@@ -28,7 +28,7 @@ class FlyClassesController < ApplicationController
   private
 
   def flyClass_params
-    params.permit(:name, :classTime, :status)
+    params.permit(:user_id, :classTime, :status)
   end
 
   def set_instructor

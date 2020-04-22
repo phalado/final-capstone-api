@@ -8,7 +8,7 @@ class InstructorsController < ApplicationController
 
   def create
     @instructor = Instructor.create!(instructor_params)
-    json.response(@instructor, :created)
+    json_response(@instructor, :created)
   end
 
   def show
@@ -28,7 +28,7 @@ class InstructorsController < ApplicationController
   private
 
   def instructor_params
-    params.permit(:name, :dragonType, :dragonName)
+    params.permit(:name, :dragonType, :dragonName, :inst_image, :dragon_image)
   end
 
   def set_instructor
