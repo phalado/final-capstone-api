@@ -22,5 +22,8 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
-  database: dragon-test-drive-api
+  host: ec2-52-6-143-153.compute-1.amazonaws.com
+  database: d5rmt4a2rg3e68
+  user: yjygvwqbjenwys
+  port: 5432
+  password: eb90b162a83c109d19d92c92453352aa9fc6bd72acdaf22266305d47fa9fe142
