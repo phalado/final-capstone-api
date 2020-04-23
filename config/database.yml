@@ -22,4 +22,6 @@ test:
 
 production:
   adapter: postgresql
-  database: d5rmt4a2rg3e68
+  database: dragon_classes_prod
+  username: microverse
+  password: '01012020'
