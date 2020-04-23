@@ -8,7 +8,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create!(user_params)
-    json_response(@user, :created)
+    # json_response({id: @user.id, name: @user.name, email: @user.email}, :created)
+    json_response({status: true}, :created)
   end
 
   def show
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
   def update
     @user.update(user_params)
     head :no_content
+    json_response({id: @user.id, name: @user.name, email: @user.email, classes: @user.fly_classes})
   end
 
   def check

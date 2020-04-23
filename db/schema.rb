@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 2020_04_22_160253) do
     t.string "dragonName"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "inst_image"
-    t.string "dragon_image"
+    t.string "instImage"
+    t.string "dragonImage"
   end
 
   create_table "users", force: :cascade do |t|
