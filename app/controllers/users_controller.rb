@@ -24,9 +24,12 @@ class UsersController < ApplicationController
 
   def check
     user = get_user(user_params)
-    if user.authenticate(params[:password])
-      json_response({id: user.id, name: user.name, email: user.email})
-    else json_response('Invalid email or password')
+    if user
+      if user.authenticate(params[:password])
+        json_response({id: user.id, name: user.name, email: user.email})
+      else json_response(true)
+      end
+    else json_response(false)
     end
   end
 
