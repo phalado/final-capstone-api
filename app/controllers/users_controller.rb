@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     user = get_user(user_params)
     if user
       if user.authenticate(params[:password])
-        json_response({id: user.id, name: user.name, email: user.email})
+        json_response(user)
       else json_response(true)
       end
     else json_response(false)
