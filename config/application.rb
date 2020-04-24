@@ -34,7 +34,7 @@ module FinalCapstoneApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-    config.middleware.insert_before 0, "Rack::Cors" do
+    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
       allow do
         origins '*'
         resource(
