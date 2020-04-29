@@ -1,9 +1,8 @@
 class FlyClassesController < ApplicationController
-  before_action :set_instructor
   before_action :set_flyClass, only: [:show, :update, :destroy]
 
   def index
-    json_response(@instructor.fly_classes)
+    json_response(FlyClass.all)
   end
 
   def show
@@ -11,8 +10,8 @@ class FlyClassesController < ApplicationController
   end
 
   def create
-    @instructor.fly_classes.create!(flyClass_params)
-    json_response(@instructor, :created)
+    @fly_class = FlyClass.create!(flyClass_params)
+    json_response(@fly_class, :created)
   end
 
   def update
@@ -28,14 +27,10 @@ class FlyClassesController < ApplicationController
   private
 
   def flyClass_params
-    params.permit(:user_id, :classTime, :status)
-  end
-
-  def set_instructor
-    @instructor = Instructor.find(params[:instructor_id])
+    params.permit(:instructor_id, :user_id, :classTime, :status)
   end
 
   def set_flyClass
-    @fly_class = @instructor.fly_classes.find_by!(id: params[:id]) if @instructor
+    @fly_class = FlyClass.find_by!(id: params[:id]) if @instructor
   end
 end
