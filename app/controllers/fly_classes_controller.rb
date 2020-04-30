@@ -6,7 +6,7 @@ class FlyClassesController < ApplicationController
   end
 
   def show
-    json_response(@item)
+    json_response(@fly_class)
   end
 
   def create
@@ -31,6 +31,6 @@ class FlyClassesController < ApplicationController
   end
 
   def set_flyClass
-    @fly_class = FlyClass.find_by!(id: params[:id]) if @instructor
+    @fly_class = FlyClass.find_by!(id: params[:id])
   end
 end
