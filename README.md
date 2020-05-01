@@ -6,6 +6,18 @@ In this repository, I build an API with data for dragon flying instructors, clas
 
 ## Table of contents
 
+- [Final Capstone Project's API](#final-capstone-projects-api)
+  - [Table of contents](#table-of-contents)
+  - [About](#about)
+  - [The back-end API](#the-back-end-api)
+    - [Data in the user table](#data-in-the-user-table)
+    - [Data in instructors table](#data-in-instructors-table)
+    - [Data in fly_classes table](#data-in-flyclasses-table)
+    - [How to use it](#how-to-use-it)
+      - [End points](#end-points)
+    - [Technologies used](#technologies-used)
+  - [Contact](#contact)
+  - [Acknowledgments](#acknowledgments)
 
 
 ## About
