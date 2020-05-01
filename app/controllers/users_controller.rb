@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: %i[show update destroy]
 
   def index
     @users = User.all
@@ -9,16 +9,16 @@ class UsersController < ApplicationController
   def create
     @user = User.create!(user_params)
     # json_response({id: @user.id, name: @user.name, email: @user.email}, :created)
-    json_response({status: true}, :created)
+    json_response({ status: true }, :created)
   end
 
   def show
-    json_response({id: @user.id, name: @user.name, email: @user.email, classes: @user.fly_classes})
+    json_response({ id: @user.id, name: @user.name, email: @user.email, classes: @user.fly_classes })
   end
 
   def update
     @user.update(user_params)
-    json_response({status: true})
+    json_response({ status: true })
   end
 
   def check
@@ -48,6 +48,6 @@ class UsersController < ApplicationController
   end
 
   def get_user(u_params)
-    return User.find_by(email: u_params[:email])
+    User.find_by(email: u_params[:email])
   end
 end

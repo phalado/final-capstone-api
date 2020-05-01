@@ -1,5 +1,5 @@
 class StaticController < ApplicationController
   def home
-    json_response("Home Page")
+    json_response('Home Page')
   end
 end

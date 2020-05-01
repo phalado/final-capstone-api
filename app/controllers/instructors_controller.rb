@@ -1,5 +1,5 @@
 class InstructorsController < ApplicationController
-  before_action :set_instructor, only: [:show, :update, :destroy]
+  before_action :set_instructor, only: %i[show update destroy]
 
   def index
     @instructors = Instructor.all

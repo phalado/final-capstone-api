@@ -2,7 +2,7 @@
 
 This is part of Microverse's final capstone project.
 
-In this repository I build an API with data for dragon flying instructors, classes and user profile based in the characters of [How to Train Your Dragon][httyd] series.
+In this repository, I build an API with data for dragon flying instructors, classes, and user profiles based in the characters of [How to Train Your Dragon][httyd] series.
 
 ## Table of contents
 
@@ -10,7 +10,7 @@ In this repository I build an API with data for dragon flying instructors, class
 
 ## About
 
-The project's goal was to create a book of appointment. The back-end should be a REST API done with Ruby on Rails. The front-end should be done with React and Redux. This README will be focused in the API. For more datails about the project visit the front-end's repository.
+The project's goal was to create a book of appointment. The back-end should be a REST API done with Ruby on Rails. The front-end should be done with React and Redux. This README will be focused on the API. For more details about the project visit the front-end's repository.
 
 The project's assignment can be seen [here][assignment].
 
@@ -23,10 +23,10 @@ Repository: https://github.com/phalado/final-capstone-api/
 
 ## The back-end API
 
-The back-end consists in an API that receives a message and answer it answer it with data from a database. The database is composed of three tables, to know, one for user data, one for instructors data and one for classes.
+The back-end consists of an API that receives a message and answers it with data from a database. The database is composed of three tables, to know, one for user data, one for instructors data, and one for classes.
 
 
-### Data in user table
+### Data in the user table
 
 * name
 * email
