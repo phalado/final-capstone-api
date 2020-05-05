@@ -104,6 +104,10 @@ Base URL: https://dragon-test-drive-api.herokuapp.com
   * dragonType
   * dragonImage
 
+*instructors/id*
+
+* **GET** - to receive a specific instructor's data
+
 */fly_classes*
 
 * **GET** - to receive an object with all the classes
