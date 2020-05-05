@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Instructors', type: :request do
-
   let!(:instructor) { create(:instructor) }
 
   describe 'GET /instructors' do
@@ -47,24 +46,24 @@ RSpec.describe 'Instructors', type: :request do
   end
 
   describe 'POST /instructors' do
-    let(:valid_attributes) {
+    let(:valid_attributes) do
       {
         name: 'Astrid Hofferson',
         instImage: 'https://raw.githubusercontent.com/phalado/final-capstone-api/master/images/astrid.png',
         dragonName: 'Stormfly',
         dragonType: 'Deadly Nadler',
-        dragonImage: 'https://raw.githubusercontent.com/phalado/final-capstone-api/master/images/Stormfly.png',
+        dragonImage: 'https://raw.githubusercontent.com/phalado/final-capstone-api/master/images/Stormfly.png'
       }
-    }
+    end
 
-    let(:invalid_attributes) {
+    let(:invalid_attributes) do
       {
         instImage: 'https://raw.githubusercontent.com/phalado/final-capstone-api/master/images/astrid.png',
         dragonName: 'Stormfly',
         dragonType: 'Deadly Nadler',
-        dragonImage: 'https://raw.githubusercontent.com/phalado/final-capstone-api/master/images/Stormfly.png',
+        dragonImage: 'https://raw.githubusercontent.com/phalado/final-capstone-api/master/images/Stormfly.png'
       }
-    }
+    end
 
     context 'when the request is valid' do
       before { post '/instructors', params: valid_attributes }

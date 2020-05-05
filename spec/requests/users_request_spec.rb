@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-
   let!(:user) { create(:user) }
 
   describe 'GET /users' do
@@ -86,39 +85,39 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'POST /users' do
-    let(:valid_attributes) {
+    let(:valid_attributes) do
       {
         name: 'Jonny Doe',
         email: 'jonnyd@email.com',
         password: 'foobar',
-        password_confirmation: 'foobar',
+        password_confirmation: 'foobar'
       }
-    }
+    end
 
-    let(:no_name) {
+    let(:no_name) do
       {
         email: 'jd@email.com',
         password: 'foobar',
-        password_confirmation: 'foobar',
+        password_confirmation: 'foobar'
       }
-    }
+    end
 
-      let(:no_email) {
+    let(:no_email) do
       {
         name: 'J Doe',
         password: 'foobar',
-        password_confirmation: 'foobar',
+        password_confirmation: 'foobar'
       }
-    }
+    end
 
-      let(:dif_pass) {
+    let(:dif_pass) do
       {
         name: 'J Doe',
         email: 'jd@email.com',
         password: 'foobar',
-        password_confirmation: 'foobas',
+        password_confirmation: 'foobas'
       }
-    }
+    end
 
     context 'when the request is valid' do
       before { post '/users', params: valid_attributes }

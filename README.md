@@ -15,6 +15,7 @@ In this repository, I build an API with data for dragon flying instructors, clas
     - [Data in fly_classes table](#data-in-flyclasses-table)
     - [How to use it](#how-to-use-it)
       - [End points](#end-points)
+      - [Local usage](#local-usage)
     - [Technologies used](#technologies-used)
   - [Contact](#contact)
   - [Acknowledgments](#acknowledgments)
@@ -120,6 +121,22 @@ Base URL: https://dragon-test-drive-api.herokuapp.com
 *fly_classes/:id*
 
 * **DELETE** - to delete a specific class
+
+
+#### Local usage
+
+To use this API locally, follow the steps:
+
+* Download the repository as zip
+* Extract the data
+* Open your terminal and navigate to repository's folder
+* Run:
+  * Bundle install
+  * Rails db:create
+  * Rails db:migrate
+  * Rails db:seed
+  * Rails server
+* Eat a candy bar
 
 
 ### Technologies used

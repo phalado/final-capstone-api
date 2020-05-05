@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show update destroy]
 
   def index
-    users = get_users
+    users = all_users
     json_response(users)
   end
 
@@ -50,12 +50,12 @@ class UsersController < ApplicationController
     User.find_by(email: u_params[:email])
   end
 
-  def get_users
+  def all_users
     users = User.all
-    newUsers = []
+    new_users = []
     users.each do |user|
-      newUsers << {id: user.id, name: user.name, email: user.email}
+      new_users << { id: user.id, name: user.name, email: user.email }
     end
-    newUsers
+    new_users
   end
 end
