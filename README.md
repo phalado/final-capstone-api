@@ -130,6 +130,7 @@ To create this project I used:
 * bcrypt gem
 * Heroku
 * Postgresql
+* rspec
 
 
 ## Contact

@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create!(user_params)
-    # json_response({id: @user.id, name: @user.name, email: @user.email}, :created)
     json_response({ status: true }, :created)
   end
 
@@ -25,7 +24,7 @@ class UsersController < ApplicationController
     user = get_user(user_params)
     if user
       if user.authenticate(params[:password])
-        json_response(user)
+        json_response({ id: user.id, name: user.name, email: user.email })
       else json_response(true)
       end
     else json_response(false)
